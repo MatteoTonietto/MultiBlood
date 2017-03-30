@@ -1,0 +1,21 @@
+v1.3	(2017-03-20)
+ - Added: 		possibility to choose which parameters are optimized and which are kept fixed 
+
+v1.2 	(2016-02-09)
+ - Changed:		global optimization is now run before lsqnonlin and support multiple starting point
+ - Removed: 	nonnegative costrained (it was buggy)
+
+v1.1.1	(2015-12-04)
+ - Added:     	added option for lsqnonlin (TolFun, TolX, MaxFunEvals, Display)
+
+v1.1
+ - Added:     	added option for analytical Jacobian. [y,J] = FUN(par,fixed,t)
+
+v1.01	(2015-04-12)
+ - Changed:		residual were calculated as (fit - data), now it's (data - fit);
+ - Fixed:		est.Warning is now set to false if there are no warning in the matrix inversion	
+ - Added:	 	est.J now store the Jacobian	
+ 
+v1.0	(2014)
+ - First release
+ 
