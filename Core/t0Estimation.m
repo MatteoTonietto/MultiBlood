@@ -6,13 +6,12 @@ function t0 = t0Estimation(t,z)
 % Based on Muggeo V, Statist. Med. 2003; 22:3055–3071
 
 [~, indp] = max(z);
-Tp        = t(indp);
 
 t_2p = t(1 : indp);
 z_2p = z(1 : indp); 
 
 % initial value
-t0 = Tp/2;
+t0 = t_2p(1);
 
 Nmax = 20;
 Tol  = 1e-6;
