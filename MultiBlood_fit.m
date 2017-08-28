@@ -8,12 +8,12 @@ function [par,info,info_Cp] = MultiBlood_fit(Blood)
 % Cmet = Ctot - yCp             % 2
 % Cmet = (1/PPf - 1)*yCp        % 3
 
-appCmet = [0;2;3];
+appCmet = [0;0;3];
 
 %% Other options
 %--------------------------------------------------------------------------
 vicTp      = 0;         % Tp is fixed
-vincYp     = 0;         % higher weight on Yp (weight * 20)
+vincYp     = 1;         % higher weight on Yp (weight * 20)
 PPf0       = 0;         % PPf can start from a value different than 1
 extraMet   = 0;         % extra regressors for Cmet
 vinct1     = 0;         % t1 is fixed to 0

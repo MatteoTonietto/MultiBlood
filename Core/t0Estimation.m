@@ -30,14 +30,21 @@ while iter && change
     % par = [t_2p,U,V]\z_2p; for nonzero first line
     par = [U,V]\z_2p;
     
-    % 3 Update t0 estimate
-    t0 = par(2)/par(1) + t0;
+    if par(1)~=0
+        % 3 Update t0 estimate
+        t0 = par(2)/par(1) + t0;
+        
+        % 4 Convergence
+        iter   = i < Nmax;
+        change = abs(par(2)) > Tol;
+        
+        i = i + 1;
+        
+    else
+        change = false;
+    end
 
-    % 4 Convergence
-    iter   = i < Nmax;
-    change = abs(par(2)) > Tol;
-    
-    i = i + 1;
+
     
 %     h = figure(1);
 %     plot(t,z,'o')
